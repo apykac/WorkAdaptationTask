@@ -1,6 +1,7 @@
 package ru.vsk.services;
 
 import ru.vsk.exchange.Exchanger;
+import ru.vsk.exchange.ExchangerActiveMQ;
 import ru.vsk.exchange.StaticData;
 
 import javax.ws.rs.GET;
@@ -9,7 +10,7 @@ import javax.ws.rs.PathParam;
 
 @Path("/")
 public class EmployeeServiceResource {
-    private Exchanger exchanger = new Exchanger(StaticData.getTracker());
+    private Exchanger exchanger = new ExchangerActiveMQ(StaticData.getCamelContext());
 
     public EmployeeServiceResource() {
     }
