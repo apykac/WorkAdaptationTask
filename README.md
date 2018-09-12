@@ -1,4 +1,8 @@
 # WorkAdaptationTask
+после утсановки бандлов первым запускать testbundle, затем apache-camel-cxfrs
+при принудительной остановки файлов, стребуется рестарт ServiceMix
+Пока не понял как решить проблему не перезапуская ServiceMix
+
 тестирование методов по адресам:
 
 http://localhost:9000/employeeservice/employees/{String}
