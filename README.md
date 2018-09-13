@@ -5,7 +5,7 @@ feature:repo-add mvn:ru.vsk/camel-rest/1.0.0/xml/features
 
 feature:install semushev@rest
 
-при принудительной остановки бандлов, стребуется рестарт ServiceMix
+при принудительной остановки бандлов, требуется рестарт ServiceMix
 
 Пока не понял как решить проблему не перезапуская ServiceMix
 
