@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint
+        xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+        xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs">
+
+    <bean id="employeeService" class="ru.vsk.services.EmployeeServiceResource"/>
+
+    <jaxrs:server id="customerService" address="http://localhost:9000/employeeservice">
+        <jaxrs:serviceBeans>
+            <ref component-id="employeeService"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+</blueprint>

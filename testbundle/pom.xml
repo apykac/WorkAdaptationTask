@@ -2,12 +2,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.vsk</groupId>
-    <artifactId>testbundle</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>bundle</packaging>
+    <parent>
+        <groupId>ru.vsk</groupId>
+        <artifactId>ru.vsk.adapttask</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
 
-    <name>testbundle OSGi Bundle</name>
+    <artifactId>testbundle</artifactId>
+    <packaging>bundle</packaging>
+    <name>Semushev :: Camel :: REST+ActiveMQ :: Calc Service</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
