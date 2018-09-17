@@ -11,8 +11,8 @@ feature:install semushev@rest
 
 тестирование методов по адресам:
 
-http://localhost:9000/employeeservice/employees/{String}
+http://localhost:9000/string/{String}
 Выводит на страницу то что вы ввели в конце строки
 
-http://localhost:9000/employeeservice/methods/{int}
+http://localhost:9000/factorial/{int}
 Выводит факториал введенного в конце строки числа
