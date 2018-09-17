@@ -2,29 +2,19 @@ package ru.vsk.services;
 
 import ru.vsk.exchange.Exchanger;
 import ru.vsk.exchange.ExchangerActiveMQ;
-import ru.vsk.exchange.StaticData;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+public class EmployeeServiceResource implements EmployeeService {
+    private Exchanger exchanger = new ExchangerActiveMQ();
 
-@Path("/")
-public class EmployeeServiceResource {
-    private Exchanger exchanger = new ExchangerActiveMQ(StaticData.getCamelContext());
-
-    public EmployeeServiceResource() {
+    public EmployeeServiceResource() throws Exception {
     }
 
-    @GET
-    @Path("/employees/{name}/")
-    public String getCustomer(@PathParam("name") String name) {
-        return "Welcome " + name;
+    public String getString(String name) {
+        return "Welcome your string: " + name;
     }
 
-    @GET
-    @Path("/methods/{id}/")
-    public String methods(@PathParam("id") Integer id) {
-        return "you write in this: " + id + "<br>" +
+    public String methods(Integer id) {
+        return "you write in this: " + id + System.lineSeparator() +
                 "Factorial of this number is: " + exchanger.getFactorial(id);
     }
 

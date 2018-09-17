@@ -11,7 +11,8 @@
 
     <modules>
         <module>features</module>
-        <module>testbundle</module>
+        <module>service-bundle</module>
+        <module>receiver-bundle</module>
         <module>apache-camel-cxfrs</module>
     </modules>
 

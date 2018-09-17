@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint
+        xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+        xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs"
+        xmlns:cxf="http://cxf.apache.org/blueprint/core">
+
+    <service interface="ru.vsk.services.Calculator">
+        <bean class="ru.vsk.services.MainCalculator"/>
+    </service>
+
+</blueprint>
