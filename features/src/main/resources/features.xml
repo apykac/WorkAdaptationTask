@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features name="camel-blueprint" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
     <feature name="semushev@rest" version="1.0.0">
+        <bundle>mvn:com.google.code.gson/gson/2.8.5</bundle>
+        <bundle>mvn:ru.vsk/service-bundle/1.0.0</bundle>
         <bundle>mvn:ru.vsk/service-bundle/1.0.0</bundle>
         <bundle>mvn:ru.vsk/receiver-bundle/1.0.0</bundle>
         <bundle>mvn:ru.vsk/apache-camel-cxfrs/1.0.0</bundle>
