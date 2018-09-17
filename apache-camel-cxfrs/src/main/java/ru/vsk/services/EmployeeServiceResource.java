@@ -1,12 +1,12 @@
 package ru.vsk.services;
 
 import ru.vsk.exchange.Exchanger;
-import ru.vsk.exchange.ExchangerActiveMQ;
 
 public class EmployeeServiceResource implements EmployeeService {
-    private Exchanger exchanger = new ExchangerActiveMQ();
+    private Exchanger exchanger;
 
-    public EmployeeServiceResource() throws Exception {
+    public EmployeeServiceResource(Exchanger exchanger) {
+        this.exchanger = exchanger;
     }
 
     public String getString(String name) {

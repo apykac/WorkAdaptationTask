@@ -10,8 +10,20 @@
         </cxf:features>
     </cxf:bus>
 
-    <bean id="employeeService" class="ru.vsk.services.EmployeeServiceResource"/>
-    <service ref="employeeService" interface="ru.vsk.services.EmployeeService"/>
+    <bean id="activemqConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="tcp://localhost:61616"/>
+        <property name="userName" value="karaf"/>
+        <property name="password" value="karaf"/>
+    </bean>
+
+    <bean id="exchangerActiveMQ" class="ru.vsk.exchange.ExchangerActiveMQ">
+        <argument ref="activemqConnectionFactory"/>
+        <argument value="exchangerActiveMQ"/>
+    </bean>
+
+    <bean id="employeeService" class="ru.vsk.services.EmployeeServiceResource">
+        <argument ref="exchangerActiveMQ"/>
+    </bean>
 
     <jaxrs:server id="someService" address="http://localhost:9000/">
         <jaxrs:serviceBeans>
